@@ -15,11 +15,11 @@ var bayeganDictionary = new BayeganDictionaryBuilder()
 
 build "AesCrypto" base encryption storage dictionary:
 ```
-var key = "encryption key length must be 32 char";
+var encryptionKey = "encryption key length must be 32 char";
 var iv = "iv key length must be 16 char";
 
 var bayeganDictionary = new BayeganDictionaryBuilder()
-                        .UseDefaultSecurePlayerPrefs(key, iv)
+                        .UseDefaultSecurePlayerPrefs(encryptionKey, iv)
                         .Build();
 ```
 

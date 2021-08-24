@@ -24,9 +24,9 @@ namespace Bayegan.Builder
 			return this;
 		}
 
-		public BayeganDictionaryBuilder UseDefaultSecurePlayerPrefs(string key, string iv)
+		public BayeganDictionaryBuilder UseDefaultSecurePlayerPrefs(string encryptionKey, string iv)
 		{
-			_bayeganDictunary = new SecurePlayerPrefsStorage(new AesCryptoService(key, iv));
+			_bayeganDictunary = new SecurePlayerPrefsStorage(new AesCryptoService(encryptionKey, iv));
 			return this;
 		}
 

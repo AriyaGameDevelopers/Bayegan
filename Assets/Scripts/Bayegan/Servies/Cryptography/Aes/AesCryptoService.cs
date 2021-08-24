@@ -9,22 +9,22 @@ namespace Bayegan.Services.Cryptography.Aes
     {
         private readonly AesCryptoServiceProvider _aesCryptoServiceProvider;
 
-        public AesCryptoService(string key, string iv)
+        public AesCryptoService(string encryptionKey, string iv)
         {
-            CheckKeyAndIvLength(key, iv);
+            CheckKeyAndIvLength(encryptionKey, iv);
 
-            _aesCryptoServiceProvider = GenerateAes(key, iv);
+            _aesCryptoServiceProvider = GenerateAes(encryptionKey, iv);
         }
 
-        private void CheckKeyAndIvLength(string key, string iv)
+        private void CheckKeyAndIvLength(string encryptionKey, string iv)
         {
-            if(string.IsNullOrEmpty(key))
-                throw new ArgumentNullException(nameof(key));
+            if(string.IsNullOrEmpty(encryptionKey))
+                throw new ArgumentNullException(nameof(encryptionKey));
             
             if(string.IsNullOrEmpty(iv))
                 throw new ArgumentNullException(nameof(iv));
 
-            if(key.Length != 32)
+            if(encryptionKey.Length != 32)
                 throw new ArgumentException("invalid 'key' length. 'key' length is 32 chars.");
 
             if(iv.Length != 16)
