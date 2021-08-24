@@ -25,7 +25,7 @@ namespace Bayegan.Storage.Dictionaries
                 return defaultValue;
             }
             
-            var decryptedValue = _cryptoService.Descrypt(encryptedText);
+            var decryptedValue = _cryptoService.Decrypt(encryptedText);
 
             if(string.IsNullOrEmpty(decryptedValue))
             {

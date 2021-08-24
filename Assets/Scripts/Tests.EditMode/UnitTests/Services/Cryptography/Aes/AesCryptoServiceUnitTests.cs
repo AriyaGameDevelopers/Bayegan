@@ -76,7 +76,7 @@ namespace Bayegan.Tests.UnitTests.Service.Cryptography.Aes
         {
             Assert.Throws<ArgumentNullException>(() => 
             {
-                _aesCryptoService.Descrypt(textToDecrypt);
+                _aesCryptoService.Decrypt(textToDecrypt);
             });
         }
 
@@ -87,7 +87,7 @@ namespace Bayegan.Tests.UnitTests.Service.Cryptography.Aes
         [TestCase("gOZsEqIRhIpe5lmctaN0+g==", "%$#@!%^&*()+_")]
         public void Descrypt_CallWithValidText(string textToDecrypt, string expected)
         {
-            var decryptedText = _aesCryptoService.Descrypt(textToDecrypt);
+            var decryptedText = _aesCryptoService.Decrypt(textToDecrypt);
             Assert.AreEqual(decryptedText, expected);
         }
 

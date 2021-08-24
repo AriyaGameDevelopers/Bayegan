@@ -44,7 +44,7 @@ namespace Bayegan.Services.Cryptography.Aes
             };
         }
 
-        public string Descrypt(string textToDecrypt)
+        public string Decrypt(string textToDecrypt)
         {
             if(string.IsNullOrEmpty(textToDecrypt))
             {
