@@ -43,9 +43,6 @@ class CustomCrypto : ICryptoService
 
 ```
 ```
-var key = "encryption key length must be 32 char";
-var iv = "iv key length must be 16 char";
-
 var bayeganDictionary = new BayeganDictionaryBuilder()
                         .UseCustomSecurePlayerPrefs(new CustomCrypto())
                         .Build();
@@ -61,6 +58,6 @@ var value = bayeganDictionary.Load(key, defaultValue);
 ```
 
 ## ToDo
-- [x] Sample Code
+- [ ] Default value unit/integration test
 - [ ] Document
 - [ ] Add sqlite
