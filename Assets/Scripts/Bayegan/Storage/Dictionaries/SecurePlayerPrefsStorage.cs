@@ -20,7 +20,7 @@ namespace Bayegan.Storage.Dictionaries
 
             var encryptedText = LoadString(key, textDefaultValue);
 
-            if(string.IsNullOrEmpty(encryptedText))
+            if(string.IsNullOrEmpty(encryptedText) || encryptedText == textDefaultValue)
             {
                 return defaultValue;
             }
